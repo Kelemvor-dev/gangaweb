@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es-ES">
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="JeysonGarcia" />
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/style.css" type="text/css" />                
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/main-ganga.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/swiper.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/dark.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/font-icons.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/animate.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/magnific-popup.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/components/bs-filestyle.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/components/bs-select.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/components/bs-switches.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/components/radio-checkbox.css" type="text/css" />
+
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/responsive.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url:base }}addons/shared_addons/themes/gangaweb/css/custom.css" type="text/css" />
+
+        <script>
+            var ganga = {'base_url': '{{ url:base}}', 'site_url': '{{ url:site }}'}
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Document Title
+        ============================================= -->
+        <title>Ganga | Shop</title>
+
+    </head>
+
+    <body class="stretched">
+
+        <!-- Document Wrapper
+        ============================================= -->
+        <div id="wrapper" class="clearfix">
+
+            <!-- Header
+            ============================================= -->
+            <header id="header" class="sticky-style-2" data-sticky-class="not-dark">
+                <div id="top-bar">
+                    <div class="container clearfix">
+                        <div class="col_half nobottommargin clearfix">
+                            <!-- Top Links
+                            ============================================= -->
+                            <div class="top-links">
+                                <ul>
+                                </ul>
+                            </div><!-- .top-links end -->
+                        </div>
+                        <div class="col_half fright col_last clearfix nobottommargin">
+                            <!-- Top Social
+                            ============================================= -->
+                            {{ widgets:instance id="2"}}                            
+                        </div>
+                    </div>
+                </div>
+                <div id="header-wrap" class="">
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu" class="style-2 center">
+                        <div class="container clearfix">
+                            <div id="logo" class="divcenter visible-xs" style="width: 38%;height: auto;">
+                                <a href="index.html" class="standard-logo" data-dark-logo="{{ url:base }}addons/shared_addons/themes/gangaweb/images/logo-dark.png"><img src="{{ url:base }}addons/shared_addons/themes/gangaweb/images/logo.png" alt="Canvas Logo"></a>
+                                <a href="index.html" class="retina-logo" data-dark-logo="{{ url:base }}addons/shared_addons/themes/gangaweb/images/logo-dark@2x.png"><img src="{{ url:base }}addons/shared_addons/themes/gangaweb/images/logo@2x.png" alt="Canvas Logo"></a>
+                            </div>
+                            <div id="primary-menu-trigger">
+                                <i class="icon-reorder"></i>
+                            </div>
+                            <ul class="sf-js-enabled" style="touch-action: pan-y;margin-top: 0px !important;">
+                                <li class="hidden-xs"><a href="{{ url:site }}home"><div class="logo-navar"><img width="200" src="{{ url:base }}addons/shared_addons/themes/gangaweb/images/logo.png"></div></a></li>
+                                <li class="mega-menu hidden-xs">
+                                    {{ if user:logged_in }}
+                                    <div style="width: 93%;margin-top: -7%;margin-left: 40px;display: block;" class="div-find mega-menu-content style-2 clearfix"> 
+                                        {{ else }}
+                                        <div style="width: 93%;margin-top: -6%;margin-left: 40px;display: block;" class="div-find mega-menu-content style-2 clearfix"> 
+                                            {{ endif }}
+                                            <!--<ul  class="mega-menu-column col-md-2">
+                                            </ul>-->
+                                            <div class="content-wrap" style="margin: 0px 0px 0px 49px;">
+                                                <div id="portfolio" class="searh-results portfolio grid-container portfolio-6 portfolio-masonry clearfix">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <div>
+                                                <form class="navbar-form navbar-left" role="search" style="margin: -6px 0px;">
+                                                    <div class="form-group">
+                                                        <input id="searh" style="width: 400px" onkeyup="searchProducts();" name='searh' type="text" class="form-control">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default">Buscar</button>
+                                                </form>
+                                            </div>
+                                        </a>
+                                </li>
+                                <li class="mega-menu"><a href="#"><div>Categorias</div></a>
+                                    {{ if user:logged_in }}
+                                    <div class="mega-menu-content style-2 clearfix" style="margin: -7% 60px !important;">
+                                        {{ else }}
+                                        <div class="mega-menu-content style-2 clearfix" style="margin-top: -6%">
+                                            {{ endif }}
+                                            {{ widgets:instance id="4"}}
+                                        </div>
+                                </li>
+                                {{ if user:logged_in }}
+                                <li class=""><a href="{{ url:site }}users/logout/"><div>Cerrar Sesión</div></a>
+                                <li class="">
+                                    <a href="{{ url:site }}my-profile">                                       
+                                        <div align="center" style="border: solid;border-radius: 27px;width: auto;height: 40px;padding: 8px;margin-top: -10px;background: #333;color: white;">
+                                            <i class="icon-user" style="border: solid;border-radius: 37px;width: 40px;height: 40px;padding: 7px;margin-top: -10px;"></i><b style="margin: 0px 15px;">{{ user:first_name user_id= _user:id }}</b>
+                                        </div>                                        
+                                    </a>
+                                </li>
+                                {{ widgets:instance id="5"}}                                
+                                {{ else }}
+                                <li><a href="{{ url:site }}users/login"><div>Iniciar Sesión</div></a></li>
+                                {{ endif }}
+                            </ul>
+                        </div>
+
+                    </nav><!-- #primary-menu end -->
+
+                </div>
+
+            </header><!-- #header end -->

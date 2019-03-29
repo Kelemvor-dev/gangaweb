@@ -1,0 +1,70 @@
+/* ----------------------------------------------------------------
+        Custom CSS
+
+        Add all your Custom Styled CSS here for New Styles or
+        Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+
+.messages-sistem{
+    position: fixed !important;
+    z-index: 999 !important;
+    margin: 13px 41px !important;
+}
+
+.messages-sistem-movile{
+    z-index: 999 !important;
+    margin: 13px 0px !important;
+    width: 70%;
+    text-align: center;
+    height: 39px;
+    position: fixed;
+}
+.searh-results{
+    height: auto !important;
+}
+.buton-notification{
+    font-size: 32px;
+    position: relative;
+    float: right;
+    margin-top: -16px;
+    margin-right: -9px;
+}
+.image-profile{
+    width: 120px;
+    height: 120px;
+    border: solid;
+    overflow: hidden;
+    border-radius: 72px;
+    border-color: #333333;
+    border-width: 4px;
+}
+
+@media (max-width: 1200px){
+    .div-find{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
+
+.div-divider-left{
+    position: absolute;
+    border-left: 1px solid #d8d8d8;
+    width: 40px;
+    height: 100%;
+    margin-left: -26px;
+}
+.icon-border-circle{
+    border: 1px solid #cecccc;
+    border-radius: 18px;
+    padding: 4px 7px;
+    background-color: #eee;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    line-height: 1;
+    font-size: 18px !important;
+    text-align: center;
+    top: 257px;
+    left: -16px;
+    color: #cacaca;
+}

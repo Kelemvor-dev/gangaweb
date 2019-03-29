@@ -1,0 +1,10 @@
+.DS_Store
+.buildpath
+.project
+.settings
+.idea
+/system/cms/cache/
+/system/cms/config/database.php
+/system/cms/logs/
+/assets/cache/
+/nbproject/private/
