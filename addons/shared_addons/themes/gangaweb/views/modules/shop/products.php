@@ -346,7 +346,7 @@
                                                     <a href="<?php echo site_url('shop/preOrder/' . $categorieId . '/' . $publicate->id) ?>"><img src="<?php echo site_url($image->file) ?>" width="100%" height="auto"></a>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
-                                            <div class="sale-flash"><?php echo intval(($publicate->precio_real - $publicate->precio_ganga) / ($publicate->precio_real) * 100) ?>% de ganga</div>
+                                            <div class="sale-flash"><?php echo intval(($publicate->precio_real - $publicate->precio_ganga) / ($publicate->precio_real) * 100) ?>% de ahorro</div>
                                             <div class="product-overlay">
                                                 <a href="<?php echo site_url('shop/preOrder/' . $categorieId . '/' . $publicate->id) ?>" class="item-quick-view" style="width: 100%;"><i class="icon-zoom-in2"></i><span> Más información</span></a>
                                             </div>

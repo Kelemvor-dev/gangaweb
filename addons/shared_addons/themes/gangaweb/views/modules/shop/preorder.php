@@ -43,7 +43,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="sale-flash"><?php echo intval(($publicate->precio_real - $publicate->precio_ganga) / ($publicate->precio_real) * 100) ?>% de ganga</div>
+                                        <div class="sale-flash"><?php echo intval(($publicate->precio_real - $publicate->precio_ganga) / ($publicate->precio_real) * 100) ?>% de ahorro</div>
                                     </div><!-- Product Single - Gallery End -->
 
                                 </div>
@@ -85,7 +85,7 @@
                                                 <?php if ($this->session->userdata('id')): ?>
                                                     <a href="#" data-toggle="modal" data-target="#orderFormModal-<?php echo $publicate->id ?>" class="add-to-cart button nomargin">Enviar solicitud de compra</a>
                                                 <?php else: ?>
-                                                    <p>Inicia sesión para comenzar el proceso de compra</p>
+                                                    <a href="<?php echo site_url('register') ?>" class="add-to-cart button nomargin">Enviar solicitud de compra</a>
                                                 <?php endif; ?>
                                             <?php else: ?>
                                                 <?php if ($publicate->comprador_id == $this->session->userdata('id')): ?>

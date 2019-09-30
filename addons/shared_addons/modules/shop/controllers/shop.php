@@ -71,7 +71,22 @@ class shop extends Public_Controller {
             'state' => '0',
             'process' => 'pre-order'
         );
-        $this->db->insert('admin_notifications', $notifi);
+        if ($this->db->insert('admin_notifications', $notifi)):
+            $this->load->library('email');
+            $config['protocol'] = 'sendmail';
+            $config['wordwrap'] = TRUE;
+            $config['mailtype'] = 'html';
+            $config['charset'] = 'utf-8';
+            $config['crlf'] = "\r\n";
+            $config['newline'] = "\r\n";
+            $this->email->initialize($config);
+            $this->email->from('newsletter@sologanga.com.co', 'Ganga');
+            $this->email->to('jeysongar@gmail.com');
+            $this->email->subject('!Alerta¡ Hay una nueva peticion de compra');
+            $msg = '<img width="50%" style="margin-left: 20%;" src="' . site_url('addons/shared_addons/themes/gangaweb/images/correo_admin.png') . '">';
+            $this->email->message($msg);
+            $this->email->send();
+        endif;
 
         $data = array(
             'user_id' => $this->session->userdata('id'),

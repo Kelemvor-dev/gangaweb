@@ -153,7 +153,7 @@
                                     <section class="item">
                                         <div class="content">
                                             <?php foreach ($publication as $item): ?>
-                                                <?php echo form_open_multipart(site_url('admin/publications/saveNotification/' . $item->user_id . '/' . $item->id.'/'.$item->comprador_id)); ?>
+                                                <?php echo form_open_multipart(site_url('admin/publications/saveNotification/' . $item->user_id . '/' . $item->id . '/' . $item->comprador_id)); ?>
                                                 <section>
                                                     <label>Mensaje</label></br>
                                                     <textarea type="text" name="message" style="width: 95%;height: 100px"></textarea>               
@@ -165,10 +165,11 @@
                                                     <button type="submit" name="notifi[]" value="declino" onclick="return confirm('Esta seguro? Solo debe utilizar esta opcion para que el usuario cambie un item del producto para su posterior actualizacion');" class="btn orange" style="font-size: 11px;">Devolver Publicacion</button>
                                                 <?php endif; ?>
                                                 <button type="submit" name="notifi[]" value="elimino" onclick="return confirm('Esta seguro? Esta opcion elimina definitivamente del sistema la publicacion');" class="btn red" style="font-size: 11px;">Eliminar Publicacion</button>
-                                                <button type="submit" name="notifi[]" value="termino" onclick="return confirm('Esta seguro? Con esta opcion damos por teminada la publicacion este es el proceso con el que se finaliza una compra');" class="btn blue" style="font-size: 11px;">Publicacion Comprada</button>
-                                                <?php if ($item->comprador_id != 0): ?>
+                                                <?php if ($item->comprador_id != NULL): ?>
+                                                    <button type="submit" name="notifi[]" value="termino" onclick="return confirm('Esta seguro? Con esta opcion damos por teminada la publicacion este es el proceso con el que se finaliza una compra');" class="btn blue" style="font-size: 11px;">Publicacion Comprada</button>
                                                     <button type="submit" name="notifi[]" value="no-disponible" onclick="return confirm('Esta seguro? Este proceso solo es para cuando el producto sea verificado y no tenga existencia');" class="btn orange" style="font-size: 11px;">No esta disponible</button>
                                                 <?php endif; ?>
+
                                                 <?php echo form_close(); ?>
                                             <?php endforeach; ?>
                                         </div>

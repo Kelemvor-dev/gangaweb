@@ -6,8 +6,8 @@
                     <div class="swiper-slide dark" style="background-image: url('{{ url:base }}<?php echo $banner->image ?>')">
                         <div class="container clearfix">
                             <div class="slider-caption slider-caption-center">
-                                <h2 data-caption-animate="fadeInUp"><?php echo $banner->title ?></h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200"><?php echo $banner->text ?></p>
+                                <h2 data-caption-animate="fadeInUp" style="font-size:36px"><?php echo $banner->title ?></h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200" style="color:<?php echo $banner->color_text ?>;font-size:<?php echo $banner->position_text ?>px; backgrund-color:<?php echo $banner->color_text ?>; opacity:0.5;"><?php echo $banner->text ?></p>
                                 <p data-caption-animate="fadeInUp" data-caption-delay="200">
                                     <a href="<?php echo site_url('shop') ?>" class="button button-3d button-rounded button-red">Compra</a>
                                     {{ if user:logged_in }}
@@ -159,7 +159,7 @@
                                 <div class="col-md-4 center" style="height: 128px;overflow: hidden;padding: 4px;">
                                     <div class="product-image" style="">
                                         <a href="<?php echo site_url('shop/preOrder/' . $item->categoria . '/' . $item->id) ?>"><img src="<?php echo site_url($item->file) ?>" width="100%" height="auto"></a>
-                                        <div class="sale-flash"><?php echo intval(($item->precio_real - $item->precio_ganga) / ($item->precio_real) * 100) ?>% de ganga</div>
+                                        <div class="sale-flash"><?php echo intval(($item->precio_real - $item->precio_ganga) / ($item->precio_real) * 100) ?>% de ahorro</div>
                                         <div class="product-overlay">
                                             <a href="" class="item-quick-view" style="width: 100%;"><i class="icon-zoom-in2"></i><span> Más información</span></a>
                                         </div>
@@ -185,7 +185,7 @@
                         <div class="col-md-2 center" style="padding: 4px;">
                             <div class="product-image" style="height: auto;">
                                 <a href="<?php echo site_url('shop/preOrder/' . $item->categorie . '/' . $item->id) ?>"><img src="<?php echo site_url($item->file) ?>" width="100%" height="auto"></a>
-                                <div class="sale-flash"><?php echo intval(($item->precio_real - $item->precio_ganga) / ($item->precio_real) * 100) ?>% de ganga</div>
+                                <div class="sale-flash"><?php echo intval(($item->precio_real - $item->precio_ganga) / ($item->precio_real) * 100) ?>% de ahorro</div>
                                 <div class="product-overlay">
                                     <a href="" class="item-quick-view" style="width: 100%;"><i class="icon-zoom-in2"></i><span> Más información</span></a>
                                 </div>

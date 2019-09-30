@@ -42,6 +42,14 @@
                                 <label for="name">Texto <span>*</span></label>
                                 <div class="input"><?php echo form_textarea('text', (isset($banner->text)) ? $banner->text : set_value('text'), 'class="dev-input-text"'); ?></div>
                             </li>
+                            <li>
+                                <label for="name">Color del texto <span></span></label>
+                                <div class="input"><?php echo form_input_color('color_text', (isset($banner->color_text)) ? $banner->color_text : set_value('color_text'), 'class="dev-input-title"'); ?></div>
+                            </li>
+                            <li>
+                                <label for="name">Tamaño del texto <span>Recomendado 12 a 15</span></label>
+                                <div class="input"><?php echo form_input('position_text', (isset($banner->position_text)) ? $banner->position_text : set_value('position_text'), 'class="dev-input-title"'); ?></div>
+                            </li>
                         </ul>
                         <?php
                         echo (isset($banner)) ? form_hidden('id', $banner->id) : null;
