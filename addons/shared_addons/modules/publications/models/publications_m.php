@@ -153,7 +153,6 @@ class publications_m extends MY_Model {
     }
 
     public function getHomedes() {
-        $this->db->where('state', 1);
         $this->db->where('destacado', 1);
         $this->db->group_by('default_publications.id');
         $this->db->select('default_publications.*,ROUND((default_publications.precio_real - default_publications.precio_ganga)/(default_publications.precio_real)*100) as porcentaje,images_publicate.file');

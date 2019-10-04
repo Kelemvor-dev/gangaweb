@@ -74,6 +74,7 @@ class Admin extends Admin_Controller {
     }
 
     public function saveNotification($user_id, $publication_id, $comprador_id) {
+//        var_dump($_POST['notifi'][0]);die;
         if ($_POST['notifi'][0] == 'acepto'):
 
             $data = array(

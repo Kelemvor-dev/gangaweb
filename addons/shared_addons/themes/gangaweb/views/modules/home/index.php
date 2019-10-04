@@ -149,15 +149,20 @@
             <div class="row-fluid">
                 <?php foreach ($publications as $key => $item): ?>
                     <?php if ($key <= 15): ?>
-                        <?php if ($item->sello_calidad == 1): ?>
-                            <div class="garantie-logo-home">
-                                <img src="<?php echo site_url("addons/shared_addons/themes/gangaweb/images/garantie.png") ?>">
-                            </div>
-                        <?php endif; ?>
                         <div id="shop">
                             <div>
                                 <div class="col-md-4 center" style="height: 128px;overflow: hidden;padding: 4px;">
                                     <div class="product-image" style="">
+                                        <?php if ($item->sello_calidad == 1): ?>
+                                            <div class="garantie-logo-home">
+                                                <img src="<?php echo site_url("addons/shared_addons/themes/gangaweb/images/garantie.png") ?>">
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if ($item->state == 3): ?>
+                                            <div class="sold-logo-home">
+                                                <div>Vendido</div>
+                                            </div>
+                                        <?php endif; ?>
                                         <a href="<?php echo site_url('shop/preOrder/' . $item->categoria . '/' . $item->id) ?>"><img src="<?php echo site_url($item->file) ?>" width="100%" height="auto"></a>
                                         <div class="sale-flash"><?php echo intval(($item->precio_real - $item->precio_ganga) / ($item->precio_real) * 100) ?>% de ahorro</div>
                                         <div class="product-overlay">
@@ -175,15 +180,20 @@
     <div class="col-md-12 center col-padding" style="background-color: #F5F5F5;">
         <?php foreach ($publications as $key => $item): ?>
             <?php if ($key > 15): ?>
-                <?php if ($item->sello_calidad == 1): ?>
-                    <div class="garantie-logo-home">
-                        <img src="<?php echo site_url("addons/shared_addons/themes/gangaweb/images/garantie.png") ?>">
-                    </div>
-                <?php endif; ?>
                 <div id="shop">
                     <div>
                         <div class="col-md-2 center" style="padding: 4px;">
                             <div class="product-image" style="height: auto;">
+                                <?php if ($item->sello_calidad == 1): ?>
+                                    <div class="garantie-logo-home">
+                                        <img src="<?php echo site_url("addons/shared_addons/themes/gangaweb/images/garantie.png") ?>">
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($item->state == 3): ?>
+                                    <div class="sold-logo-home">
+                                        <div>Vendido</div>
+                                    </div>
+                                <?php endif; ?>
                                 <a href="<?php echo site_url('shop/preOrder/' . $item->categorie . '/' . $item->id) ?>"><img src="<?php echo site_url($item->file) ?>" width="100%" height="auto"></a>
                                 <div class="sale-flash"><?php echo intval(($item->precio_real - $item->precio_ganga) / ($item->precio_real) * 100) ?>% de ahorro</div>
                                 <div class="product-overlay">

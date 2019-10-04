@@ -195,7 +195,11 @@
                                             <td><?php echo $item->mobile ?></td>
                                             <td><?php echo $item->documento_de_identidad ?></td>
                                             <td>
-                                                <a class="btn blue" href="<?php echo site_url('admin/publications/seePublication/' . $item->id) ?>">Finalizar proceso de compra</a>                                           
+                                                <?php if ($item->state != 3): ?>
+                                                    <a class="btn blue" href="<?php echo site_url('admin/publications/seePublication/' . $item->id) ?>">Finalizar proceso de compra</a>                                           
+                                                <?php else: ?>
+                                                    <a class="btn red" href="<?php echo site_url('admin/publications/seePublication/' . $item->id) ?>">El proceso esta finalizado</a>
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endif; ?>

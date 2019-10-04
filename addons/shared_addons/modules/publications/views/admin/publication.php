@@ -166,8 +166,10 @@
                                                 <?php endif; ?>
                                                 <button type="submit" name="notifi[]" value="elimino" onclick="return confirm('Esta seguro? Esta opcion elimina definitivamente del sistema la publicacion');" class="btn red" style="font-size: 11px;">Eliminar Publicacion</button>
                                                 <?php if ($item->comprador_id != NULL): ?>
-                                                    <button type="submit" name="notifi[]" value="termino" onclick="return confirm('Esta seguro? Con esta opcion damos por teminada la publicacion este es el proceso con el que se finaliza una compra');" class="btn blue" style="font-size: 11px;">Publicacion Comprada</button>
-                                                    <button type="submit" name="notifi[]" value="no-disponible" onclick="return confirm('Esta seguro? Este proceso solo es para cuando el producto sea verificado y no tenga existencia');" class="btn orange" style="font-size: 11px;">No esta disponible</button>
+                                                    <?php if ($item->state != 3): ?>
+                                                        <button type="submit" name="notifi[]" value="termino" onclick="return confirm('Esta seguro? Con esta opcion damos por teminada la publicacion este es el proceso con el que se finaliza una compra');" class="btn blue" style="font-size: 11px;">Publicacion Comprada</button>
+                                                        <button type="submit" name="notifi[]" value="no-disponible" onclick="return confirm('Esta seguro? Este proceso solo es para cuando el producto sea verificado y no tenga existencia');" class="btn orange" style="font-size: 11px;">No esta disponible</button>
+                                                    <?php endif; ?>
                                                 <?php endif; ?>
 
                                                 <?php echo form_close(); ?>
